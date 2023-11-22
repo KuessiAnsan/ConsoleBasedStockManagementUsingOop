@@ -32,7 +32,7 @@ public class PDFGenerator {
                 contentStream.newLineAtOffset(margin, yTextPos);
                 contentStream.showText("Product");
                 contentStream.newLineAtOffset(100, 0);
-                contentStream.showText("Description");
+                contentStream.showText("Name");
                 contentStream.newLineAtOffset(100, 0);
                 contentStream.showText("Quantity");
                 contentStream.newLineAtOffset(100, 0);
