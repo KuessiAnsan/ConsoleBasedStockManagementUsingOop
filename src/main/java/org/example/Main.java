@@ -4,10 +4,10 @@ import org.example.article.Article;
 import org.example.boutique.Shop;
 
 import java.math.BigInteger;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+import static org.example.pdfgenerator.PDFGenerator.generatePDF;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,6 +34,7 @@ public class Main {
                     3- Delete an article
                     4- Modify an article
                     5- Display all the articles
+                    6- Generate a PDF report
                     """);
                 int option = 0;
                 int searchCriteria = 0;
@@ -134,6 +135,13 @@ public class Main {
                         }
                     }
                     case 5 -> shop.displayAllArticles();
+                    case 6 -> {
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
+                        String timestamp = simpleDateFormat.format(new Date());
+                        String filePath = "stock_report_" + timestamp + ".pdf";///A new file will be generated everytime
+                        generatePDF(filePath, List.copyOf(shop.getArticles()));
+                        System.out.println("PDF generated successfully at: " + filePath);
+                    }
                     default -> System.out.println("Enter something !!");
                 }
             } catch(InputMismatchException e){
