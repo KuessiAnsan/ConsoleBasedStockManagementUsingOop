@@ -12,7 +12,7 @@ import static org.example.pdfgenerator.PDFGenerator.generatePDF;
 public class Main {
     public static void main(String[] args) {
         Shop shop = new Shop(
-            Set.of(
+              Set.of(
                     new Article(1L, "Book", BigInteger.valueOf(12000), 12),
                     new Article(2L, "Pen", BigInteger.valueOf(15000), 15),
                     new Article(3L, "Coke", BigInteger.valueOf(2000), 21),
