@@ -24,10 +24,7 @@ public class Article {
 
 
     public Boolean isArticleBetweenPrices(BigInteger firstPrice, BigInteger secondPrice){
-        if (((this.getPrice().compareTo(firstPrice) > 0) && (secondPrice.compareTo(this.getPrice()) > 0))){
-            return true;
-        }
-        return false;
+        return (this.getPrice().compareTo(firstPrice) > 0) && (secondPrice.compareTo(this.getPrice()) > 0);
     }
 
 
