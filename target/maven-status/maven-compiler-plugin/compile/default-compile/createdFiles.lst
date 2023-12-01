@@ -1,0 +1,5 @@
+org\example\article\Article.class
+org\example\article\Article$ArticleBuilder.class
+org\example\Main.class
+org\example\boutique\Shop.class
+org\example\pdfgenerator\PDFGenerator.class
